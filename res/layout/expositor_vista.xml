@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android1="http://schemas.android.com/apk/res/android"
+    android1:id="@+id/LinearLayout1"
+    android1:layout_width="wrap_content"
+    android1:layout_height="wrap_content"
+    android1:orientation="vertical" >
+
+    <ScrollView
+        android1:id="@+id/scrollView2"
+        android1:layout_width="match_parent"
+        android1:layout_height="wrap_content" >
+
+        <LinearLayout
+            android1:layout_width="match_parent"
+            android1:layout_height="wrap_content"
+            android1:orientation="vertical" >
+
+            <TableRow
+                android1:id="@+id/tableRow1"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content" >
+
+                <TextView
+                    android1:id="@+id/nombreEventoTV"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="50dp"
+                    android1:textAppearance="?android:attr/textAppearanceLarge" />
+            </TableRow>
+
+            <TableRow
+                android1:id="@+id/tableRow2"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content" >
+
+                <TextView
+                    android1:id="@+id/fechaEventoTV"
+                    android1:layout_width="120dp"
+                    android1:layout_height="35dp"
+                    android1:text="@string/nombre"
+                    android1:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android1:id="@+id/nombreExpositorTV"
+                    android1:layout_width="180dp"
+                    android1:layout_height="wrap_content"
+                    android1:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+
+            <TableRow
+                android1:id="@+id/tableRow3"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content" >
+
+                <TextView
+                    android1:id="@+id/textView3"
+                    android1:layout_width="120dp"
+                    android1:layout_height="35dp"
+                    android1:text="@string/correo"
+                    android1:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android1:id="@+id/correoExpositorTV"
+                    android1:layout_width="180dp"
+                    android1:layout_height="wrap_content"
+                    android1:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+
+            <TableRow
+                android1:id="@+id/tableRow6"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content" >
+
+                <TextView
+                    android1:id="@+id/lugarEventoTV"
+                    android1:layout_width="120dp"
+                    android1:layout_height="wrap_content"
+                    android1:text="@string/description"
+                    android1:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android1:id="@+id/textViewDescripcionExpo"
+                    android1:layout_width="180dp"
+                    android1:layout_height="wrap_content"
+                    android1:textAppearance="?android:attr/textAppearanceMedium" />
+
+            </TableRow>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

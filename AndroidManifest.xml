@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.drai.eventosapp2"
+    android:versionCode="2"
+    android:versionName="2.1" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_edu_cont"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.drai.eventosapp2.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+ 			android:label="Expositor"
+ 			android:name="com.drai.eventosapp2.Expositor" >
+ 			<intent-filter >
+ 				<action android:name="com.drai.eventosapp2.Expositor" />	
+ 				<category android:name="android.intent.category.DEFAULT" />		 	
+ 			</intent-filter>
+	 	</activity>
+	 	
+        <activity
+ 			android:label="Evento"
+ 			android:name="com.drai.eventosapp2.Evento" >
+ 			<intent-filter >
+ 				<action android:name="com.drai.eventosapp2.Evento" />	
+ 				<category android:name="android.intent.category.DEFAULT" />		 	
+ 			</intent-filter>
+	 	</activity>
+	 	
+        <activity
+ 			android:label="Lista de Eventos"
+ 			android:name="com.drai.eventosapp2.ListaEventos" >
+ 			<intent-filter >
+ 				<action android:name="com.drai.eventosapp2.ListaEventos" />	
+ 				<category android:name="android.intent.category.DEFAULT" />		 	
+ 			</intent-filter>
+	 	</activity>
+	 	
+	 	<activity
+ 			android:label="Lista de Expositores"
+ 			android:name="com.drai.eventosapp2.ListaExpositores" >
+ 			<intent-filter >
+ 				<action android:name="com.drai.eventosapp2.ListaExpositores" />	
+ 				<category android:name="android.intent.category.DEFAULT" />		 	
+ 			</intent-filter>
+	 	</activity>
+	 	
+	 	<activity
+ 			android:label="Detalles del Evento"
+ 			android:name="com.drai.eventosapp2.DetalleEvento" >
+ 			<intent-filter >
+ 				<action android:name="com.drai.eventosapp2.DetalleEvento" />	
+ 				<category android:name="android.intent.category.DEFAULT" />		 	
+ 			</intent-filter>
+	 	</activity>
+	 	
+    </application>
+
+</manifest>
