@@ -352,10 +352,11 @@ int layout abc_search_dropdown_item_icons_2line 0x7f030015
 int layout abc_search_view 0x7f030016
 int layout abc_simple_decor 0x7f030017
 int layout activity_main 0x7f030018
-int layout evento_detalle 0x7f030019
-int layout evento_vista 0x7f03001a
-int layout expositor_vista 0x7f03001b
-int layout support_simple_spinner_dropdown_item 0x7f03001c
+int layout curso_vista 0x7f030019
+int layout evento_detalle 0x7f03001a
+int layout evento_vista 0x7f03001b
+int layout expositor_vista 0x7f03001c
+int layout support_simple_spinner_dropdown_item 0x7f03001d
 int menu main 0x7f0c0000
 int string _ 0x7f0a0026
 int string abc_action_bar_home_description 0x7f0a0001
