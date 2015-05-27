@@ -1,12 +1,14 @@
 package com.drai.eventosapp2.model;
 
+import java.io.Serializable;
+
 
 /**
  *  Clase para el tranporte de datos de Expositores en el sistema
  * @author Heinner Esteban Alvarez Rivas <exteban34@gmail.com>
  * @version 1.0 21/05/2015
  */
-public class ExpositorObj {
+public class ExpositorObj implements Serializable{
 
 	private String id;
 	private String nombre;

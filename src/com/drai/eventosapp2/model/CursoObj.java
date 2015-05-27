@@ -1,11 +1,13 @@
 package com.drai.eventosapp2.model;
 
+import java.io.Serializable;
+
 /**
  *  Clase para el tranporte de datos de Cursos en el sistema
  * @author Heinner Esteban Alvarez Rivas <exteban34@gmail.com>
  * @version 1.0 21/05/2015
  */
-public class CursoObj {
+public class CursoObj implements Serializable{
 	private String id;
 	private String titulo;
 	private String lugar;
@@ -20,25 +22,16 @@ public class CursoObj {
 	 * Constructor de la clase EventoObj
 	 * @param id del evento
 	 * @param titulo del evento
-	 * @param lugar donde se realiza el evento
-	 * @param sitioWeb del evento
 	 * @param fechaInicio del evento
 	 * @param horaInicio del evento
-	 * @param descripcion del evento
-	 * @param fechaFinalizacion del evento
 	 */
-	public CursoObj(String id, String titulo, String lugar, String sitioWeb,
-			String fechaInicio, String horaInicio, String descripcion,
-			String fechaFinalizacion) {
+	public CursoObj(String id, String titulo, 
+			String fechaInicio, String horaInicio) {
 		super();
 		this.id = id;
-		this.titulo = titulo;
-		this.lugar = lugar;
-		this.sitioWeb = sitioWeb;
+		this.titulo = titulo;		
 		this.fechaInicio = fechaInicio;
-		this.horaInicio = horaInicio;
-		this.descripcion = descripcion;
-		this.fechaFinalizacion = fechaFinalizacion;
+		this.horaInicio = horaInicio;		
 	}
 	
 	/**

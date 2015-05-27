@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.content.Intent;
 import android.provider.CalendarContract;
 import android.provider.CalendarContract.Events;
@@ -181,8 +182,9 @@ public class Evento extends Activity {
 				lugar = jsonObj.getString("lugar");
 				descripcion = jsonObj.getString("descripcion");
 				fechaFinalizacion = jsonObj.getString("fechaFinalizacion");
-
-				obtenerDatosParaCalendario();
+				
+				if(obtenerDatosParaCalendario()){
+				
 
 				Calendar beginTime = Calendar.getInstance();
 				beginTime.set(anoIni, mesIni, diaIni, horaIni, minIni);
@@ -201,7 +203,7 @@ public class Evento extends Activity {
 						.putExtra(Events.EVENT_TIMEZONE, timeZone.getID());
 
 				startActivity(intent);
-
+				}
 				pDialog.dismiss();
 
 			} catch (Exception e) {
@@ -228,8 +230,11 @@ public class Evento extends Activity {
 	 * Metodo encargado de desglosar los datos obtenidos en el objeto JSON y
 	 * capturarlos en Int's para añadir al calendario
 	 */
-	public void obtenerDatosParaCalendario() {
+	public boolean obtenerDatosParaCalendario() {
 
+		try{
+			
+			
 		/**
 		 * Desglosar String's que contienen Fechas y Horas
 		 */
@@ -370,6 +375,15 @@ public class Evento extends Activity {
 				}
 			}
 		}
+		return true;
+		}catch(Exception e){
+			Toast.makeText(
+					getApplicationContext(),
+					"Error generando datos para el calendario.  \n"
+							+ "Los datos especificados no permiten añadir su evento al calendario",
+					Toast.LENGTH_LONG).show();
+			return false;
+		}
 
 	}
 
@@ -404,11 +418,7 @@ public class Evento extends Activity {
 
 	};
 
-	/**
-	 * Evento click para el link de la aplicaicon
-	 * 
-	 * @param view
-	 */
+	
 
 
 }

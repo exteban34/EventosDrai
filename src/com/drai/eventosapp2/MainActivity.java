@@ -1,7 +1,10 @@
 package com.drai.eventosapp2;
 
+import java.util.ArrayList;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -13,7 +16,13 @@ import android.widget.Button;
 
 
 
+
+
+
+
 import com.drai.eventosapp2.R;
+import com.drai.eventosapp2.model.EventoObj;
+import com.drai.eventosapp2.util.DataPassEventos;
 import com.drai.eventosapp2.util.LeerJSON;
 
 /**
@@ -99,13 +108,22 @@ public class MainActivity extends Activity {
 			 	numeroEventos=jsonArray.length();
 			 	String[] lista= new String[numeroEventos];
 			 	int[] ids= new int[numeroEventos];
+			 	ArrayList<EventoObj> eventosObjs = new ArrayList<EventoObj>();
 			 	for (int i = 0; i < jsonArray.length(); i++) {
 			 		JSONObject jsonObject = jsonArray.getJSONObject(i);
+			 		EventoObj evento= new EventoObj(jsonObject.getString("id"),
+			 				jsonObject.getString("titulo"),
+			 				jsonObject.getString("fechaInicio"),
+			 				jsonObject.getString("horaInicio"));
+			 		
+			 		//pendiente añadir control para evnetos o cursos
+			 		eventosObjs.add(evento);
 			 		lista[i]=jsonObject.getString("titulo");
 			 		ids[i]=jsonObject.getInt("id");		 		
 			 				 		
 			 		} 
 			 	Intent e = new Intent("com.drai.eventosapp2.ListaEventos");
+			 	e.putExtra("eventosObj", new DataPassEventos(eventosObjs));
 	    	    e.putExtra("eventos", lista);
 	    	    e.putExtra("ids", ids);
 	        	startActivityForResult(e,1);
