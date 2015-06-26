@@ -2,7 +2,16 @@
     android1:id="@+id/LinearLayout1"
     android1:layout_width="wrap_content"
     android1:layout_height="wrap_content"
-    android1:orientation="vertical" >
+    android1:orientation="vertical"
+    android1:background="@drawable/backgrounds_expositores" >
+
+    <ImageView
+        android1:id="@+id/imageView1"
+        android1:layout_width="match_parent"
+        android1:layout_height="100dp"
+        android1:contentDescription="TODO"
+        android1:scaleType="fitXY"
+        android1:src="@drawable/banners_app02" />
 
     <ScrollView
         android1:id="@+id/scrollView2"
@@ -13,18 +22,6 @@
             android1:layout_width="match_parent"
             android1:layout_height="wrap_content"
             android1:orientation="vertical" >
-
-            <TableRow
-                android1:id="@+id/tableRow1"
-                android1:layout_width="wrap_content"
-                android1:layout_height="wrap_content" >
-
-                <TextView
-                    android1:id="@+id/nombreEventoTV"
-                    android1:layout_width="wrap_content"
-                    android1:layout_height="50dp"
-                    android1:textAppearance="?android:attr/textAppearanceLarge" />
-            </TableRow>
 
             <TableRow
                 android1:id="@+id/tableRow2"

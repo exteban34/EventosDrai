@@ -100,7 +100,7 @@ public class Evento extends Activity {
 		textlugar = (TextView) findViewById(R.id.lugarEventoTV);
 		textSitioWeb = (TextView) findViewById(R.id.sitioWebEventoTV);
 		textSitioWeb.setOnClickListener(controlClick);
-		bCalendar = (Button) findViewById(R.id.buttonCalendar);
+		bCalendar = (Button) findViewById(R.id.btnCalendar);
 		bCalendar.setOnClickListener(controlClick);
 		bDetalle = (Button) findViewById(R.id.btnEventos);
 		bDetalle.setOnClickListener(controlClick);
@@ -222,7 +222,7 @@ public class Evento extends Activity {
 		textfecha.setText(fechaInicio);
 		texthora.setText(horaInicio);
 		textlugar.setText(lugar);
-		textSitioWeb.setText(sitioWeb);
+		
 
 	}
 
@@ -394,7 +394,7 @@ public class Evento extends Activity {
 
 		public void onClick(View v) {
 			switch (v.getId()) {
-			case R.id.buttonCalendar:
+			case R.id.btnCalendar:
 				new LeerEventoyAñadirAlCalendario()
 						.execute("http://ingenieria.udea.edu.co:8080/EventoWS/resources/evento/"
 								+ id);
