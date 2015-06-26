@@ -2,14 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@drawable/backgrounds_eventos" >
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:scaleType="fitXY"
-        android:src="@drawable/sceventos" />
+        android:src="@drawable/banners_app01"
+         android:contentDescription="TODO"/>
 
     <ListView
         android:id="@+id/listViewEventos"

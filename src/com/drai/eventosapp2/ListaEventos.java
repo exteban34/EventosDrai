@@ -30,6 +30,9 @@ public class ListaEventos extends Activity{
 	 */
 	String[] lista;
 	
+	/**
+	 *ListView controladora 
+	 */
 	private ListView listview;
 	
 	/**

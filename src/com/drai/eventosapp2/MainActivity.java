@@ -38,6 +38,7 @@ public class MainActivity extends Activity {
 	 */
 	Button botonVerEventos;
 	Button botonVerExpositores;
+	Button botonVerCursos;
 	/**
 	 * ProgressDialog que indica la carga de datos
 	 */
@@ -54,7 +55,9 @@ public class MainActivity extends Activity {
 		botonVerEventos= (Button) findViewById(R.id.btnEventos);
 		botonVerEventos.setOnClickListener( controlClick);
 		botonVerExpositores = (Button) findViewById(R.id.btnExpositores);
-		botonVerExpositores.setOnClickListener(controlClick);					    
+		botonVerExpositores.setOnClickListener(controlClick);
+		botonVerCursos = (Button) findViewById(R.id.btnCursos);
+		botonVerCursos.setOnClickListener(controlClick);
 	}
 
 	/***
@@ -73,7 +76,12 @@ public class MainActivity extends Activity {
 		       case R.id.btnEventos:
 		    	   	   new LeerJSONListaEventos().execute(
 				   				 "http://ingenieria.udea.edu.co:8080/EventoWS/resources/evento/from/0");
-		    	   	   		break;		          	        
+		    	   	   		break;	
+		    	   	   		
+		       case R.id.btnCursos:
+		    	   		new LeerJSONListaEventos().execute(
+				   				 "http://ingenieria.udea.edu.co:8080/EventoWS/resources/evento/from/0");
+	    	   	   		break;
 		        
 		      }
 		        
