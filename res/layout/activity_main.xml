@@ -18,7 +18,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="27dp"
         android:background="@drawable/botones_app03"
-        android:text="@string/nulo" />
+        android:text="@string/nulo"
+        android:onClick="onClickExpositores" />
 
     <Button
         android:id="@+id/btnCursos"
@@ -28,7 +29,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
         android:background="@drawable/botones_app02"
-        android:text="@string/nulo" />
+        android:text="@string/nulo"
+        android:onClick="onClickCursos" />
 
     <Button
         android:id="@+id/btnEventos"
@@ -38,6 +40,7 @@
         android:layout_alignLeft="@+id/btnCursos"
         android:layout_marginBottom="32dp"
         android:background="@drawable/botones_app01"
-        android:text="@string/nulo" />
+        android:text="@string/nulo"
+        android:onClick="onClickEventos" />
 
 </RelativeLayout>

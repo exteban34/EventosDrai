@@ -52,42 +52,28 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		botonVerEventos= (Button) findViewById(R.id.btnEventos);
-		botonVerEventos.setOnClickListener( controlClick);
-		botonVerExpositores = (Button) findViewById(R.id.btnExpositores);
-		botonVerExpositores.setOnClickListener(controlClick);
+		botonVerEventos= (Button) findViewById(R.id.btnEventos);		
+		botonVerExpositores = (Button) findViewById(R.id.btnExpositores);		
 		botonVerCursos = (Button) findViewById(R.id.btnCursos);
-		botonVerCursos.setOnClickListener(controlClick);
+		
 	}
 
-	/***
-	 * Variable encargada de controlar el evento click
-	 */
-	View.OnClickListener controlClick = new View.OnClickListener() {
-		  public void onClick(View v) {
-		      switch(v.getId()) {
-
-		          
-		       case  R.id.btnExpositores:    	
-		    	   		new LeerJSONTaskListaExpositores().execute(
-				   				 "http://ingenieria.udea.edu.co:8080/EventoWS/resources/expositor/from/0");
-		    	   			break;		        	
-		    	   
-		       case R.id.btnEventos:
-		    	   	   new LeerJSONListaEventos().execute(
-				   				 "http://ingenieria.udea.edu.co:8080/EventoWS/resources/evento/from/0");
-		    	   	   		break;	
-		    	   	   		
-		       case R.id.btnCursos:
-		    	   		new LeerJSONListaEventos().execute(
-				   				 "http://ingenieria.udea.edu.co:8080/EventoWS/resources/evento/from/0");
-	    	   	   		break;
-		        
-		      }
-		        
-		   }
-		 
-	};
+	
+	public void onClickEventos(View view){
+		new LeerJSONListaEventos().execute(
+  				 "http://ingenieria.udea.edu.co:8080/EventoWS/resources/evento/from/0");
+		
+	}
+	public void onClickCursos(View view){
+		new LeerJSONListaEventos().execute(
+  				 "http://ingenieria.udea.edu.co:8080/EventoWS/resources/evento/from/0");
+		
+	}
+	public void onClickExpositores(View view){
+		new LeerJSONTaskListaExpositores().execute(
+  				 "http://ingenieria.udea.edu.co:8080/EventoWS/resources/expositor/from/0");
+		
+	}
 	
 
 	/**
