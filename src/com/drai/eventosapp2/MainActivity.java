@@ -54,7 +54,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		botonVerEventos= (Button) findViewById(R.id.btnEventos);		
 		botonVerExpositores = (Button) findViewById(R.id.btnExpositores);		
-		botonVerCursos = (Button) findViewById(R.id.btnCursos);
+		//botonVerCursos = (Button) findViewById(R.id.btnCursos);
 		
 	}
 
@@ -64,11 +64,11 @@ public class MainActivity extends Activity {
   				 "http://ingenieria.udea.edu.co:8080/EventoWS/resources/evento/from/0");
 		
 	}
-	public void onClickCursos(View view){
+	/*public void onClickCursos(View view){
 		new LeerJSONListaEventos().execute(
   				 "http://ingenieria.udea.edu.co:8080/EventoWS/resources/evento/from/0");
 		
-	}
+	}*/
 	public void onClickExpositores(View view){
 		new LeerJSONTaskListaExpositores().execute(
   				 "http://ingenieria.udea.edu.co:8080/EventoWS/resources/expositor/from/0");

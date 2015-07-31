@@ -10,17 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.vista.MainActivity" >
 
-    <Button
-        android:id="@+id/btnExpositores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnCursos"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="27dp"
-        android:background="@drawable/botones_app03"
-        android:text="@string/nulo"
-        android:onClick="onClickExpositores" />
-
+    <!--  
     <Button
         android:id="@+id/btnCursos"
         android:layout_width="wrap_content"
@@ -32,15 +22,28 @@
         android:text="@string/nulo"
         android:onClick="onClickCursos" />
 
+	-->
+
     <Button
         android:id="@+id/btnEventos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnExpositores"
-        android:layout_alignLeft="@+id/btnCursos"
-        android:layout_marginBottom="32dp"
+        android:layout_alignBottom="@+id/btnExpositores"
+        android:layout_alignLeft="@+id/btnExpositores"
+        android:layout_marginBottom="46dp"
         android:background="@drawable/botones_app01"
-        android:text="@string/nulo"
-        android:onClick="onClickEventos" />
+        android:onClick="onClickEventos"
+        android:text="@string/nulo" />
+
+    <Button
+        android:id="@+id/btnExpositores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/botones_app03"
+        android:onClick="onClickExpositores"
+        android:text="@string/nulo" />
 
 </RelativeLayout>
